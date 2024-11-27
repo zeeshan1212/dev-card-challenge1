@@ -1,0 +1,62 @@
+.dev-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1c1e26, #25262b);
+  color: #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dev-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2e3035;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.card-footer {
+  margin-top: 1rem;
+}
+
+.card-footer a {
+  text-decoration: none;
+}
+
+/* /// */
+
+.box {
+  border: 3px solid #0000;
+  border-radius: 12px;
+  background: linear-gradient(#131219, #131219) padding-box,
+    linear-gradient(var(--angle), #070707, #687aff) border-box;
+  animation: 8s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
